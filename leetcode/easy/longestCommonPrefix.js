@@ -29,3 +29,13 @@ var longestCommonPrefix = function(strs) {
 const compareStrs = ["a","b","flight"];
 
 console.log(longestCommonPrefix(compareStrs));
+
+// 上面的代码击败了5.02% js提交用户。。。 可想性能不是很好 待优化。
+
+// 看了一下官方的解题思路两种思路
+// 分治 把第一个字符串均分为两部分，每部分找到最长的公共字符串， 然后再从得到的两个字符串中找出最长的公共字符串
+// 二分法 把第一个字符串分为两部分，把字符串均分为两部分，如果第一部分全部都是公串，则将下一部分均分为两等分再对比，直到不全是公共字符串为止。
+// 采用算法 会使代码量加大，不过性能提上去了
+var opt = function(){
+
+};
