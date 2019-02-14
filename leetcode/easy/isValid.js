@@ -54,14 +54,37 @@ var opt = function(s){
                 "[": "]"
             };
 
+            let reverse = {
+                ")": "(",
+                "}": "{",
+                "]": "["
+            };
+
             // 开符号 入栈
             if(check[ele]){
                 this.arr.push(ele);
-            }else{
-                // 匹配符号
             }
-        },
+            // 匹配符号
+            else if(reverse[ele]){
+                const lastEle = this.arr[this.arr.length-1];
+                // 出栈
+                if(lastEle === reverse[ele]){
+                    this.arr.pop();
+                }else{
+                    this.arr.push(ele);
+                }
+            }
+        }
+    };
+
+    let length = s.length;
+
+    for(let i=0; i<length; i++){
+        stack.in(s.charAt(i))
     }
 
-
+    console.log(stack.arr);
+    return stack.arr.length === 0
 };
+
+// 虽然看了官方的解答，不过自己一开始并没有吃透算法，理解有所偏差，导致处理某些情况的时候还是有问题。下次还是要多想想，再撸代码。
