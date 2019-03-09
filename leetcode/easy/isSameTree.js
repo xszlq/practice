@@ -20,8 +20,17 @@ function TreeNode(val) {
      this.left = this.right = null;
 }
 
+// 一种方式直接将二叉树转换成数组来对比 不过略感麻烦 递归调用直接对比二叉树 思路比较清晰实现也比较简单
 var isSameTree = function(p, q) {
+    if(p===null && q===null){
+        return true;
+    }
 
+   if(p !== null && q!== null && p.val === q.val){
+       return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+   }else{
+       return false;
+   }
 };
 
 // 将数组转换为二叉树 例如输入[1,2,3,4,5]
