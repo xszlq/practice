@@ -13,3 +13,9 @@
 ## leetcode
 新建了一个leetcode的目录，主要是发现力扣刷题还蛮有意思的，故新建了这个目录，记录一下自己的刷题日常。
 https://leetcode-cn.com
+
+## modular 前端模块化解决方案
+### requireJS
+requireJs主要解决了两个问题：
+1.管理模块间的依赖关系，便于代码的编写和维护
+2.实现js文件的异步加载，避免网页失去响应

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用requireJs 实现模块化</title>
+    <script data-main="./main" src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
+</head>
+<body>
+    <h2>简单实用requireJs</h2>
+    <p>需要指定main.js,可以通过config制定baseUrl，默认当前路径</p>
+    <p>该demo动态加载了add.js和reduce.js,并在加载完成后，执行了相应的回调函数</p>
+    <p>通过network也能看到加载了三个js文件，当然这里可以优化：合并请求</p>
+</body>
+</html>
