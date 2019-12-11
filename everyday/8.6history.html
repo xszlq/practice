@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="pushState()">pushState</button>
+<button onclick="showLength()">showLength</button>
+
+<script>
+    let count = 1;
+
+  function pushState(){
+    let stateObj = {
+      foo: "bar",
+      count
+    };
+
+    history.pushState(stateObj, "page " + count, "bar" + count++ + ".html");
+  }
+
+  function showLength () {
+    alert(history.length)
+  }
+</script>
+
+</body>
+</html>
